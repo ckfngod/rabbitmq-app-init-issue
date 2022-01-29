@@ -1,6 +1,5 @@
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
 import { Module } from '@nestjs/common';
-import { RabbitService } from './rabbit.service';
 
 @Module({
   imports: [
@@ -13,8 +12,6 @@ import { RabbitService } from './rabbit.service';
       ],
       uri: 'amqp://localhost',
     }),
-    RabbitModule,
   ],
-  providers: [RabbitService],
 })
 export class RabbitModule {}
